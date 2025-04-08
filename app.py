@@ -589,3 +589,5 @@ def update_line_chart_explorer_graph(selected_values, filter_type, overall_toggl
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+server = app.server
