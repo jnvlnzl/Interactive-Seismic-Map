@@ -46,14 +46,14 @@ Processing dataframe for fault lines
 """
 
 ph_faults = active_faults[active_faults["catalog_name"].str.contains("Philippines", case=False)]
-print(ph_faults[["catalog_name", 'name', "geometry"]].head())
+# print(ph_faults[["catalog_name", 'name', "geometry"]].head())
 
 """Added columns to simplify bubble map charting"""
 
 magnitude_df['Date'] = pd.to_datetime(magnitude_df['Date'])
 magnitude_df['Year_Earthquake'] = magnitude_df['Date'].dt.year
 
-print(magnitude_df.head())
+# print(magnitude_df.head())
 
 """Compute average magnitude of earthquakes per province to improve for chloropleth mapping"""
 
@@ -64,7 +64,7 @@ magnitude_gdf = gpd.GeoDataFrame(
 # Calculate average magnitude per province
 magnitude_gdf = gpd.sjoin(magnitude_gdf, gdf_ph_provinces, how="left", predicate="intersects")
 province_ave_magnitudes = magnitude_gdf.groupby("adm2_en")["Magnitude"].mean().reset_index()
-print(province_ave_magnitudes.head())
+# print(province_ave_magnitudes.head())
 
 """Create dataframe for population data"""
 
@@ -73,7 +73,7 @@ magnitude_df["2000"] = magnitude_df["2000"].replace({',': ''}, regex=True).astyp
 # for Populations
 pop_columns = ["Province", "2020", "2015", "2010", "2000"]
 population_df = magnitude_df[pop_columns].drop_duplicates("Province")
-print(population_df.head())
+# print(population_df.head())
 
 """Data preparation for line chart"""
 
@@ -100,7 +100,7 @@ try:
         raise ValueError(f"Missing required columns for line chart aggregation: {missing_cols}")
 
 except Exception as e:
-    print(f"FATAL ERROR preparing data for line chart explorer: {e}. Assigning defaults.")
+    # print(f"FATAL ERROR preparing data for line chart explorer: {e}. Assigning defaults.")
     earthquake_counts = pd.DataFrame()
     overall_counts = pd.DataFrame()
     provinces, regions, island_groups = [], [], []
@@ -580,9 +580,12 @@ def update_line_chart_explorer_graph(selected_values, filter_type, overall_toggl
 
 
 # --- Run the App ---
+# if __name__ == "__main__":
+#     # When running in Colab:
+#     # app.run(mode='inline', port=8050, debug=True) # Keep debug=True for development feedback
+#     # When running locally:
+#     # app.run_server(debug=True, port=8050)
+#     app.run(debug=False, host='0.0.0.0', port=8050)
+
 if __name__ == "__main__":
-    # When running in Colab:
-    # app.run(mode='inline', port=8050, debug=True) # Keep debug=True for development feedback
-    # When running locally:
-    # app.run_server(debug=True, port=8050)
-    app.run(debug=False, host='0.0.0.0', port=8050)
+    app.run(debug=True)
