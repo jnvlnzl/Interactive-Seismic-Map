@@ -9,7 +9,7 @@ An interactive map chart that enables users to analyze temporal and spatial tren
 ## Set-up instructions
 <b> 1. 📥 Clone the Repository </b><br> 
 ```
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/jnvlnzl/Interactive-Seismic-Map
 cd your-repo-name
 ```
 Or download the ZIP and extract it, then open your terminal in the project folder.
