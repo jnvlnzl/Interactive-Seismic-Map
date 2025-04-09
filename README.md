@@ -14,13 +14,25 @@ cd your-repo-name
 ```
 Or download the ZIP and extract it, then open your terminal in the project folder.
 
-2. 📦 Install Dependencies
+2. 📂 Make Sure You're in the Correct Directory
+Before continuing, double-check that you're in the project folder — the one that contains app.py, requirements.txt, and the data/ and assets/ folders.
+You can run (on Linux):
+```
+ls
+```
+Or (on Windows):
+```
+dir
+```
+to verify the contents
+
+3. 📦 Install Dependencies
 Make sure you have Python 3 installed, then run:
 ```
 pip install -r requirements.txt
 ```
 
-3. ▶️ Launch the App
+4. ▶️ Launch the App
 Start the application by running:
 ```
 python app.py
