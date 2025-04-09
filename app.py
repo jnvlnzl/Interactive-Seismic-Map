@@ -587,7 +587,11 @@ def update_line_chart_explorer_graph(selected_values, filter_type, overall_toggl
 #     # app.run_server(debug=True, port=8050)
 #     app.run(debug=False, host='0.0.0.0', port=8050)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
 
-server = app.server
+# server = app.server
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8050))
+    app.run(host="0.0.0.0", port=port, debug=False)
