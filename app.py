@@ -121,7 +121,7 @@ magnitude_colors = ["#FFE500", "#FFC400", "#FFA400", "#FF8300",
                     "#FF6200", "#FF4100", "#FF2100", "#FF0000"]
 
 app = dash.Dash(__name__,
-                external_stylesheets=["/content/drive/MyDrive/DLSU [2021-2025]/AY 2024-2025 TERM 2/DATA101/DATA101 Group 4/assets/style.css"],
+                external_stylesheets=["assets/style.css"],
                 suppress_callback_exceptions=True) # Important for dynamic layouts
 server = app.server
 
