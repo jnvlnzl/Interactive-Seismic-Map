@@ -4,7 +4,7 @@
 misty-disk-7148.ploomber.app
 
 ## What is it about?
-An interactive map chart that enables users to analyze temporal and spatial trends in earthquake occurrences across the Philippines from 2106 to early 2025. This tool will help detect significant patterns such as regional variations in seismic activity, depth patterns, magnitude distribution, and temporal patterns. Additionally, users can filter data based on specific parameters such as time range, location, depth, and magnitude, allowing for more targeted analysis.
+An interactive map chart that enables users to analyze temporal and spatial trends in earthquake occurrences across the Philippines from 2016 to early 2025. This tool will help detect significant patterns such as regional variations in seismic activity, depth patterns, magnitude distribution, and temporal patterns. Additionally, users can filter data based on specific parameters such as time range, location, depth, and magnitude, allowing for more targeted analysis.
 
 ## Set-up instructions
 <b> 1. 📥 Clone the Repository </b><br> 
